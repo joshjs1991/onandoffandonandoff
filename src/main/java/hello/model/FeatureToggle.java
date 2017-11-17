@@ -2,9 +2,20 @@
 
 package hello.model;
 
-public class FeatureToggle {
+import java.io.Serializable;
+
+public class FeatureToggle implements Serializable {
     private String name;
-    private boolean value;
+    private boolean enabled;
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public String getName() {
         return name;
@@ -14,11 +25,11 @@ public class FeatureToggle {
         this.name = name;
     }
 
-    public boolean isValue() {
-        return value;
+    public boolean isEnabled() {
+        return enabled;
     }
 
-    public void setValue(boolean value) {
-        this.value = value;
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }
